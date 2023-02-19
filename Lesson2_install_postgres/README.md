@@ -14,7 +14,7 @@ Main PID: 16839 (dockerd)<br/>
    sudo docker network create pg-net
 3. Создала директорию /home/java/postgresql14/
 4. Подключаем созданную сеть к контейнеру сервера Postgres ( порт 5432 на виртулке занят, поэтому прописала 5454):<br/>
-   java@Ubuntu1604x64:~$ sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5454:5432 -v /home/java/postgresql14/data:/var/lib/postgresql/data postgres:14
+   java@Ubuntu1604x64:$ sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5454:5432 -v /home/java/postgresql14/data:/var/lib/postgresql/data postgres:14
 5. Проверка, что контейнер есть:<br/>
    sudo docker container ls
 6. Проверка, что в подмонтированном каталоге появились файлы:<br/>

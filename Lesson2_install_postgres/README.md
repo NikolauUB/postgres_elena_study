@@ -4,7 +4,7 @@
    инсталяция зависимостей sudo snap install docker<br/>
    проверка, что докер запущен sudo systemctl status docker<br/>
 
-java@Ubuntu1604x64:~$ sudo systemctl status docker<br/>
+java@Ubuntu1604x64:$ sudo systemctl status docker<br/>
 ● docker.service - Docker Application Container Engine<br/>
 Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)<br/>
 Active: active (running) since Sun 2023-02-19 23:55:56 MSK; 5min ago<br/>

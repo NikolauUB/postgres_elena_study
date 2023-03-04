@@ -4,17 +4,18 @@
    инсталяция зависимостей sudo snap install docker<br/>
    проверка, что докер запущен sudo systemctl status docker<br/>
 
-java@Ubuntu1604x64:~$ sudo systemctl status docker<br/>
+java@Ubuntu1604x64:$ sudo systemctl status docker<br/>
 ● docker.service - Docker Application Container Engine<br/>
 Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)<br/>
 Active: active (running) since Sun 2023-02-19 23:55:56 MSK; 5min ago<br/>
 Docs: https://docs.docker.com<br/>
 Main PID: 16839 (dockerd)<br/>
-2. Создаем docker-сеть:
-   sudo docker network create pg-net
-3. Создала директорию /home/java/postgresql14/
+
+2. Создаем docker-сеть:<br/>
+   sudo docker network create pg-net<br/>
+3. Создала директорию /home/java/postgresql14/<br/>
 4. Подключаем созданную сеть к контейнеру сервера Postgres ( порт 5432 на виртулке занят, поэтому прописала 5454):<br/>
-   java@Ubuntu1604x64:~$ sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5454:5432 -v /home/java/postgresql14/data:/var/lib/postgresql/data postgres:14
+   java@Ubuntu1604x64:$ sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -p 5454:5432 -v /home/java/postgresql14/data:/var/lib/postgresql/data postgres:14<br/>
 5. Проверка, что контейнер есть:<br/>
    sudo docker container ls
 6. Проверка, что в подмонтированном каталоге появились файлы:<br/>

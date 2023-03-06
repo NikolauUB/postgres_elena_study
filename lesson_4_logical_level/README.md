@@ -33,7 +33,7 @@ INSERT INTO testnm.t1 values(1)<br/>
 13. grant readonly TO testread;<br/>
 14. Логинимся в базу под юзером testread: \c testdb testread<br/>
 15. SELECT * FROM t1;<br/>
-    Ошибка, так как текущая схема public и в ней этой таблицы<br/>
+    Ошибка, так как текущая схема public и в ней этой таблицы нет<br/>
     testdb=# select current_schema();<br/>
     current_schema<br/>
 ----------------<br/>

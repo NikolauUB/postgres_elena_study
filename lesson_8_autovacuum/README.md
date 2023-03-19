@@ -631,8 +631,6 @@ ALTER SYSTEM SET autovacuum_vacuum_cost_delay = 10;
 <br/>
 ALTER SYSTEM SET autovacuum_vacuum_cost_limit = 1000;
 <br/>
-![](investigation.jpg)
-
 <br/>
 postgres@9091a9f0ca42:~$ pgbench -c8 -P 60 -T 600 -U postgres postgres
 <br/>
@@ -683,3 +681,4 @@ initial connection time = 12.080 ms
 tps = 909.805831 (without initial connection time)
 <br/>
 postgres@9091a9f0ca42:~$
+<img src="./investigation.jpg"/>

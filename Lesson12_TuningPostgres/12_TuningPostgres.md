@@ -59,9 +59,9 @@ max_wal_size = 4GB<br/>
 3) Следующий тул https://pgconfigurator.cybertec.at/<br/>
 Проапдейтим файл pgtune.conf:<br/>
    <br/>
-# Connectivity<br/>
+--Connectivity<br/>
 max_connections = 100<br/>
-# Memory Settings<br/>
+--Memory Settings<br/>
 shared_buffers = '256 MB'<br/>
 work_mem = '4 MB'<br/>
 maintenance_work_mem = '320 MB'<br/>
